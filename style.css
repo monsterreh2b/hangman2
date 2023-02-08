@@ -1,0 +1,68 @@
+#hangman-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+#word-display {
+    font-size: 36px;
+    margin: 50px 0;
+}
+
+#hangman-image {
+    background-image: url('hangman.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 50px;
+}
+
+#incorrect-guesses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#incorrect-guess-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+#incorrect-guess-letters {
+    font-size: 36px;
+}
+
+#guess-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#guess-input {
+    padding: 10px 20px;
+    font-size: 24px;
+    margin-right: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#guess-submit {
+    padding: 10px 20px;
+    font-size: 24px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#message {
+    font-size: 24px;
+}
+
+div#underscore-display {
+    font-size: 50pt;
+}

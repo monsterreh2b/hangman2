@@ -1,0 +1,38 @@
+on page load 
+
+  generate a random number from 1-4
+
+  using random number, pick the word
+
+  count the number of letters in chosen word
+
+  "display" the word on front as underscores (find length of word) from step 3
+
+on input submit
+
+validate value (need letters only, else alert please input a letter)
+
+grab value and make all values lowercase
+
+==
+
+
+if value in "word" 
+
+e.g value = b, word = batman
+
+find position of b in word (e.g. index = 0) 
+==
+
+REMAINING (BELOW)***
+then populate value at
+position zero (0 , 1, 2, 3, 4, 5, pick zero).
+***
+
+else 
+
+put value in incorrect guesses, with a space
+
+
+
+
