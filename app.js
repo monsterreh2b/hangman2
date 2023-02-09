@@ -3,6 +3,7 @@ const form = document.getElementById('guess-form');
 const guessInput = document.getElementById('guess-input');
 
 const wordDisplay = document.getElementById("word-display");
+const underScoreDisplayTopper = document.getElementById("underscore-display-topper");
 const underScoreDisplay = document.getElementById("underscore-display");
 const incorrectGuessLetters = document.getElementById("incorrect-guess-letters");
 const message = document.getElementById("message");
@@ -18,10 +19,10 @@ const validateLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 
 
 let word = "";
 
+let word2 = [];
 
 
-
-
+//2). generate a random number from 1-4
 function randomNumber() {
     let num1 = Math.random();
     let num2 = (num1 * 4) + 1;
@@ -29,11 +30,12 @@ function randomNumber() {
     return num3;
 }
 
+//1). on page load 
 window.addEventListener("DOMContentLoaded", function () {
     console.log("loaded");
     
  
-    index = randomNumber() - 1;
+    index = randomNumber() - 1; //2.5) alter index for index start at 0
     console.log(index);
     word = words[index];
     console.log(word);
@@ -45,7 +47,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     underScoreDisplay.innerHTML = underScores;
-
+    underScoreDisplayTopper.innerHTML = word;
 });
 
 form.addEventListener('submit', function (i) {
@@ -74,11 +76,45 @@ form.addEventListener('submit', function (i) {
             index = word.indexOf(value2.toLowerCase(), index + 1);
         }
 
+        //if value in "word" , e.g value = b, word = batman, find position of b in
+        //word(e.g.index = 0) 
+
         if (indices.length) {
             console.log("The search term '" + value2.toLowerCase() + "' was found at indices: " + indices);
+
+            
+            for (let i = 0; i < word.length; i++) {
+
+
+                
+
+                for (let j = 0; j < indices.length; j++) {
+                    
+
+                    console.log(word2);
+                    console.log(indices.length);
+                    console.log(indices);
+                    console.log(value2.toLowerCase());
+                    if (indices[j] === i) { //loop through j array of indices = [0,2], so if value of 0 found at j array equals INDEX of 
+                        // i array  0 , 1, 2 etc, then I array at position i changes to value2.toLowerCase()
+                        word2[i] = value2.toLowerCase();
+                    }
+                    //word2[i] += "_ ";
+                    //word2[indices[j]] += value2.toLowerCase();
+
+                }
+                
+                
+            }
+            // 3. Render the listItems inside the unordered list using ulEl.innerHTML
+            console.log(word2);
+        //underScoreDisplayTopper.innerHTML = word2;
+
         } else {
             console.log("The search term '" + value2.toLowerCase() + "' was not found in the word '" + word + "'");
         }
+
+        
        
 
 

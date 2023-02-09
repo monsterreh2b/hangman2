@@ -25,8 +25,27 @@ find position of b in word (e.g. index = 0)
 ==
 
 REMAINING (BELOW)***
+
+
+javascript populate an array at certain positions
+
+
 then populate value at
 position zero (0 , 1, 2, 3, 4, 5, pick zero).
+
+
+possible?
+
+Print out word (like cocomelon) above the dashes
+with what? with dashes that are same color as background
+
+We have the indices that match (cocomelon/c, position 0 and 3). So loop through the word and populate c at 0 and 3
+
+const cars = [];
+cars[0]= "c";
+cars[3]= "c";
+
+
 ***
 
 else 
