@@ -46,6 +46,8 @@ cars[0]= "c";
 cars[3]= "c";
 
 
+
+https://www.google.com/search?q=How+do+I+convert+an+array+to+string+in+Javascript+with+no+commas&rlz=1C1GCEU_enUS819US820&oq=How+do+I+convert+an+array+to+string+in+Javascript+with+no+commas&aqs=chrome..69i57.3977j0j7&sourceid=chrome&ie=UTF-8
 ***
 
 else 

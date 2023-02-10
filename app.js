@@ -6,7 +6,11 @@ const wordDisplay = document.getElementById("word-display");
 const underScoreDisplayTopper = document.getElementById("underscore-display-topper");
 const underScoreDisplay = document.getElementById("underscore-display");
 const incorrectGuessLetters = document.getElementById("incorrect-guess-letters");
+const imageGuy = document.getElementById("image-guy"); 
+
 const message = document.getElementById("message");
+
+
 
 let messageInternal = "";
 
@@ -20,6 +24,12 @@ const validateLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 
 let word = "";
 
 let word2 = [];
+
+let word3 = [];
+
+let word4 = "";
+
+let hangmanDead = 0;
 
 
 //2). generate a random number from 1-4
@@ -47,7 +57,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     underScoreDisplay.innerHTML = underScores;
-    underScoreDisplayTopper.innerHTML = word;
+    //underScoreDisplayTopper.innerHTML = word;
 });
 
 form.addEventListener('submit', function (i) {
@@ -95,23 +105,37 @@ form.addEventListener('submit', function (i) {
                     console.log(indices.length);
                     console.log(indices);
                     console.log(value2.toLowerCase());
+                    
                     if (indices[j] === i) { //loop through j array of indices = [0,2], so if value of 0 found at j array equals INDEX of 
                         // i array  0 , 1, 2 etc, then I array at position i changes to value2.toLowerCase()
-                        word2[i] = value2.toLowerCase();
+                        console.log(word[i]);
+                        word2.splice(indices[j], 1, value2.toLowerCase());
+                        console.log(word2);
+                        word3[indices[j]] = value2.toLowerCase();
+                        
+                        //let word3 = word2.join(" ");
+                        //console.log(word3);
+                        //underScoreDisplayTopper.innerHTML = word3;
                     }
+                    
                     //word2[i] += "_ ";
                     //word2[indices[j]] += value2.toLowerCase();
-
+                   
                 }
-                
+                console.log(word3);
+                word4 = word3.join(" ");
+                console.log(word4);
+                underScoreDisplayTopper.innerHTML = word4;
+                console.log(word3.length); //word3.length is the hit counter, for successful hits to the word
                 
             }
-            // 3. Render the listItems inside the unordered list using ulEl.innerHTML
-            console.log(word2);
-        //underScoreDisplayTopper.innerHTML = word2;
+           
+            
+
 
         } else {
             console.log("The search term '" + value2.toLowerCase() + "' was not found in the word '" + word + "'");
+           
         }
 
         
@@ -136,5 +160,34 @@ form.addEventListener('submit', function (i) {
         
 
         incorrectGuessLetters.innerHTML = wrongGuesses;
+
+        hangmanDead++;
+        console.log(hangmanDead);
+        if (hangmanDead === 1) {
+            imageGuy.setAttribute("src", "./1hang.jpg");
+        }
+        else if (hangmanDead === 2) {
+            imageGuy.setAttribute("src", "./2hang.jpg");
+        }
+        else if (hangmanDead === 3) {
+            imageGuy.setAttribute("src", "./3hang.jpg");
+        }
+        else if (hangmanDead === 4) {
+            imageGuy.setAttribute("src", "./4hang.jpg");
+        }
+        else if (hangmanDead === 5) {
+            imageGuy.setAttribute("src", "./5hang.jpg");
+        }
+        else if (hangmanDead === 6) {
+            imageGuy.setAttribute("src", "./6hang.jpg");
+        }
+        else {
+            imageGuy.setAttribute("src", "./7hang.jpg");
+           
+            if (confirm("Sorry, you lost! Please try again.")) {
+                window.location.reload();
+            }
+        }
+
     }
     });
