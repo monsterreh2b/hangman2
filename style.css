@@ -82,7 +82,7 @@ div#hangman-left {
 
 div#wrapper {
     display: flex;
-    background-image: url("chalkboardz.JPG");
+    background-image: url("/chalkboardz.JPG");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
