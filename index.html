@@ -1,27 +1,39 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
-<body>
-    <div id="wrapper">
-        <div id="hangman-left">
-            <img id="image-guy" alt="" src="./1hang.jpg" width="25%"><div id="incorrect-guesses">
-                <div id="incorrect-guess-title">Incorrect Guesses:</div>
+<body style="background-color: #3f702e;">
+    <div class="container" style="margin-top: 30px;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 center-it">
+                <div id="hangman-left">
+                    <img id="image-guy" alt="" src="./1hang.jpg" width="25%"><div id="incorrect-guesses">
+                        <div id="incorrect-guess-title">Incorrect Guesses:</div>
 
-            </div><div id="incorrect-guess-letters"> </div>
-        </div>
-        <div id="hangman-game">
-            <div id="word-display"></div>
-            <div id="underscore-display-topper"></div>
-            <div id="underscore-display"></div>
-            <form id="guess-form" style="margin-top:30px;">
-                <input type="text" id="guess-input" placeholder="Enter a letter">
-                <button type="submit" id="guess-submit">Guess</button>
-            </form>
-            <div id="message"> </div>
+                    </div><div id="incorrect-guess-letters"> </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 center-it">
+                <div id="hangman-game">
+                    <div id="word-display"></div>
+                    <div id="underscore-display-topper"></div>
+                    <div id="underscore-display">_ _ _ _ _ _ _ _ _ </div>
+                    <form id="guess-form" style="margin-top:30px;">
+                        <input type="text" id="guess-input" placeholder="Enter a letter">
+                        <button type="submit" id="guess-submit">Guess</button>
+                    </form>
+                    <div id="message"> </div>
+                </div>
+            </div>
         </div>
     </div>
+
+
     <script src="app.js"></script>
+
+
+
 
 
 
