@@ -24,17 +24,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 }
 
 #incorrect-guess-title {
     font-size: 24px;
     margin-bottom: 20px;
     margin-top: 40px;
+    color: white;
 }
 
 #incorrect-guess-letters {
     font-size: 36px;
+    color: white;
 }
 
 #guess-form {
@@ -62,10 +64,12 @@
 
 #message {
     font-size: 24px;
+    color: white;
 }
 
 div#underscore-display, div#underscore-display-topper {
     font-size: 50pt;
+    color: white;
 }
 
 div#hangman-left {
@@ -77,5 +81,13 @@ div#hangman-left {
 }
 
 div#wrapper {
-    display:flex;
+    display: flex;
+    background-image: url(chalkboardy.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
 }
+
+

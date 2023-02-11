@@ -183,10 +183,12 @@ form.addEventListener('submit', function (i) {
         }
         else {
             imageGuy.setAttribute("src", "./7hang.jpg");
-           
-            if (confirm("Sorry, you lost! Please try again.")) {
-                window.location.reload();
-            }
+            setTimeout(function () {
+                if (confirm("Sorry, you lost! Please try again.")) {
+                    window.location.reload();
+                }
+            }, 1500)
+            
         }
 
     }
