@@ -127,6 +127,15 @@ form.addEventListener('submit', function (i) {
                 console.log(word4);
                 underScoreDisplayTopper.innerHTML = word4;
                 console.log(word3.length); //word3.length is the hit counter, for successful hits to the word
+                console.log(word.length);
+                if (word3.length === word.length) {
+                    console.log("you win!");
+                    setTimeout(function () {
+                        if (confirm("You won! You saved Mr. Hangman from death.")) {
+                            window.location.reload();
+                        }
+                    }, 500)
+                }
                 
             }
            
@@ -187,7 +196,7 @@ form.addEventListener('submit', function (i) {
                 if (confirm("Sorry, you lost! Please try again.")) {
                     window.location.reload();
                 }
-            }, 1500)
+            }, 500)
             
         }
 
