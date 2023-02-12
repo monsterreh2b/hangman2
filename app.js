@@ -32,12 +32,18 @@ let word4 = "";
 let hangmanDead = 0;
 
 
+
+
 //2). generate a random number from 1-4
 function randomNumber() {
     let num1 = Math.random();
     let num2 = (num1 * 4) + 1;
     let num3 = Math.floor(num2);
     return num3;
+}
+
+function myFilter(elm) {
+    return (elm != null && elm !== false && elm !== "");
 }
 
 //1). on page load 
@@ -123,18 +129,25 @@ form.addEventListener('submit', function (i) {
                    
                 }
                 console.log(word3);
+                console.log(word3.length);
+                let filtered = word3.filter(myFilter);
+                console.log(filtered);
+                console.log(filtered.length); //filtered.length is the hit counter, for successful hits to the word
                 word4 = word3.join(" ");
+                let wordCount = JSON.stringify(word3.join());
+                console.log(wordCount.length);
                 console.log(word4);
+                console.log(word4.length);
                 underScoreDisplayTopper.innerHTML = word4;
-                console.log(word3.length); //word3.length is the hit counter, for successful hits to the word
-                console.log(word.length);
-                if (word3.length === word.length) {
+                console.log(word3.length - 1); 
+             
+                if (filtered.length === word.length) {
                     console.log("you win!");
                     setTimeout(function () {
-                        if (confirm("You won! You saved Mr. Hangman from death.")) {
-                            window.location.reload();
+                       if (confirm("You won! You saved Mr. Hangman from death.")) {
+                           window.location.reload();
                         }
-                    }, 500)
+                   }, 500)
                 }
                 
             }
