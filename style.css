@@ -108,4 +108,8 @@ div#wrapper {
         font-size: 12px;
         color: white;
     }
+    #incorrect-guess-letters {
+        font-size: 16px;
+        color: white;
+    }
 }
