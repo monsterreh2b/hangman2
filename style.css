@@ -100,4 +100,8 @@ div#wrapper {
     div#underscore-display, div#underscore-display-topper {
         font-size: 20pt;
     }
+    #guess-input, #guess-submit {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
 }
