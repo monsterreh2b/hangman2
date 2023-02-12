@@ -96,3 +96,8 @@ div#wrapper {
     text-align: center;
 }
 
+@media only screen and (max-width: 500px) {
+    div#underscore-display, div#underscore-display-topper {
+        font-size: 20pt;
+    }
+}
